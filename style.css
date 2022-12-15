@@ -1,0 +1,278 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    /* font-family: 'Amatic SC', cursive;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Monoton', cursive;
+    font-family: 'Playfair Display', serif; */
+}
+
+body {
+    background-color: pink;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     */
+}
+
+:root {
+    --Translate: 460px;
+}
+
+.Header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    /* margin: -1%; */
+    height: 70px;
+    background-image: linear-gradient(to bottom, #bb7bac, #bb6fb5, #b863c1, #af5ad0, #a052e0);
+}
+
+.Logo {
+    display: flex;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+}
+
+.Logo h1 {
+    margin: 5% 2%;
+}
+
+.Logo svg {
+    margin: 1% 1%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    fill: white;
+}
+
+.Logo svg:hover {
+    color: white;
+}
+
+.Animado {
+    transition: all 800ms;
+    opacity: 0;
+}
+
+.mostrarArriba {
+    animation: mostrarArriba 1s;
+}
+
+@keyframes mostrarArriba {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.ContenedorPrincipal {
+    width: 90%;
+    height: 700px;
+    margin: 1% auto;
+    background-image: linear-gradient(to bottom, #bb7bac, #bb6fb5, #b863c1, #af5ad0, #a052e0);
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 10px;
+}
+
+.ContenedorBoxes {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    /* background-color: red; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContenedorTitulo,
+.FooterNote {
+    width: 100%;
+    height: 10%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.FooterNote {
+    /* background-color: #181818; */
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.SVG1,
+.SVG2,
+.heart1,
+.heart2,
+.heart3 {
+    fill: white;
+    transition: all 800ms;
+    cursor: pointer;
+}
+
+.heart1 {
+    position: absolute;
+    left: 7%;
+}
+
+.heart2 {
+    position: absolute;
+    right: 7%;
+}
+
+.SpanTitulo {
+    margin-top: -2.5%;
+}
+
+.heart1:hover,
+.heart2:hover,
+.heart3:hover {
+    fill: red;
+}
+
+.Box,
+.BoxMid {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    justify-content: center;
+}
+
+.BoxMid {
+    height: 70%;
+    padding: 2%;
+    border-radius: 15px;
+    /* background-color: white; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+}
+
+
+.Titulo {
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    color: white;
+    text-shadow: 2px 1px 2px palevioletred;
+}
+
+.Texto {
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0%;
+}
+
+
+img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    /* background-color: red; */
+}
+
+.footer {
+    position: relative;
+    /* background-color: red; */
+    width: 100%;
+    height: 200px;
+}
+
+.Animar {
+    animation: AnimacionCorazon 5s ease infinite;
+}
+
+@keyframes AnimacionCorazon {
+    0% {
+        transform: scale(1.0, 1.0);
+    }
+
+    50% {
+        transform: scale(1.3, 1.3);
+    }
+}
+
+/* Responsive */
+
+/* #Dispositivo = Smartphones 
+#Resolucion = B/w 230px to 480px */
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+
+    #btnEnviar{
+        margin-top: 3%;        
+    }
+
+    .Logo {        
+        width: 60%;
+    }
+
+    .ContenedorBoxes {
+        flex-direction: column;
+    }
+
+    .ContenedorPrincipal {
+        height: 600px;
+        margin-top: 10%;
+    }
+
+    .Box,
+    .BoxMid {
+        /* background-color: blue; */
+        margin-top: 2%;
+        width: 90%;
+    }
+
+    .BoxMid {
+        height: 150px;
+    }
+
+    img {
+        /* background-color: red; */
+        width: 120px;
+    }
+
+    .Titulo {
+        font-size: 25px;
+    }
+
+    .Texto {
+        font-size: 16px;
+    }
+
+    .heart1 {
+        margin-top: -4%;
+        margin-left: 3%;
+    }
+
+    .heart2 {
+        margin-top: -4%;
+        margin-right: 3%;
+    }
+}
+
+/* iPads (portrait) 
+#Dispositivo = Tablets, Ipads (vertical) 
+#Resolucion = B/w 768px to 1024px */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
