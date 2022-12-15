@@ -1,72 +1,76 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
-.ContenedorPrincipal2{
+.ContenedorPrincipal2 {
     width: 90%;
     height: 700px;
     display: flex;
     flex-direction: row;
-    border-radius: 15px;    
+    border-radius: 15px;
     margin-top: 1%;
-    align-items: center;    
-    background-image: linear-gradient(to right top, #3bafde, #00c5dd, #00d7c7, #5de6a3, #adee7a);    
+    align-items: center;
+    background-image: linear-gradient(to right top, #3bafde, #00c5dd, #00d7c7, #5de6a3, #adee7a);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.Box{    
+.Box2{
     width: 20%;
     height: 50%;
     margin: 0% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .BoxMidPrin {
     width: 60%;
     height: 95%;
     margin: auto;
-    border-radius: 15px;    
+    border-radius: 15px;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 2;
 }
 
 .TextoPrin {
-    font-size: 40px;    
-    color: white;    
+    font-size: 40px;
+    color: white;
     font-family: 'Amatic SC', cursive;
-    text-decoration:overline;
+    text-decoration: overline;
 }
 
-.CajasDeTexto, textarea{
+.CajasDeTexto,
+textarea {
     font-family: 'Amatic SC', cursive;
     width: 50%;
-    background-color: transparent;    
+    background-color: transparent;
     text-align: center;
     height: 45px;
     letter-spacing: 2px;
     font-weight: bold;
     color: white;
-    font-size: 35px;        
+    font-size: 35px;
     border: none;
     border-bottom: 2px solid white;
-    outline: none;   
+    outline: none;
 }
 
-textarea{
-    font-size: 22px;  
+textarea {
+    font-size: 22px;
     padding: 2%;
     border: 2px solid white;
-    text-align: left;      
-    height: 240px;   
-    resize: none; 
+    text-align: left;
+    height: 240px;
+    resize: none;
 }
 
 .container-input {
     text-align: center;
     background: #282828;
-    border-top: 5px solid #c39f77;    
+    border-top: 5px solid #c39f77;
     border-radius: 6px;
     width: 80%;
     height: 50px;
@@ -83,7 +87,7 @@ textarea{
     z-index: -1;
 }
 
-.inputfile + label {
+.inputfile+label {
     max-width: 80%;
     font-size: 1.25rem;
     font-weight: 700;
@@ -95,7 +99,7 @@ textarea{
     padding: 0.625rem 1.25rem;
 }
 
-.inputfile + label svg {
+.inputfile+label svg {
     width: 1em;
     height: 1em;
     vertical-align: middle;
@@ -105,63 +109,63 @@ textarea{
 }
 
 .iborrainputfile {
-	font-size:22px; 
-	font-weight:normal;	
-    font-family: 'Amatic SC', cursive;    
+    font-size: 22px;
+    font-weight: normal;
+    font-family: 'Amatic SC', cursive;
 }
 
-.inputfile-2 + label {
-    color: #c39f77;    
+.inputfile-2+label {
+    color: #c39f77;
 }
 
-.inputfile-2:focus + label,
-.inputfile-2.has-focus + label,
-.inputfile-2 + label:hover {
+.inputfile-2:focus+label,
+.inputfile-2.has-focus+label,
+.inputfile-2+label:hover {
     color: #9f8465;
 }
 
 /* CSS */
 .button-55 {
-  align-self: center;
-  background-color: #282828;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: #c39f77;
-  width: 40%;
-  margin: 1% 0%;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Neucha, sans-serif;
-  font-size: 1rem;
-  line-height: 23px;
-  outline: none;
-  padding: .75rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    align-self: center;
+    background-color: #282828;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #c39f77;
+    width: 40%;
+    margin: 1% 0%;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 .button-55:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
 }
 
 .button-55:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
 
-.IMGMARIO{
+.IMGMARIO {
     position: absolute;
     width: 100px;
     height: auto;
@@ -171,15 +175,88 @@ textarea{
     margin-left: -12%;
 }
 
-.Animacion{
-    animation: MarioCamina 25s ease infinite;        
+.footer2 {
+    position: relative;
+    /* background-color: red; */
+    width: 100%;
+    height: 250px;
 }
 
-@keyframes MarioCamina{
-    0%{
+.Animacion {
+    animation: MarioCamina 25s ease infinite;
+}
+
+@keyframes MarioCamina {
+    0% {
         transform: translateX(0px);
     }
-    100%{
+
+    100% {
         transform: translateX(1650px);
-    }                
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+    .ContenedorPrincipal2 {
+        flex-direction: column;
+        height: 1200px;
+        /* background-color: red; */
+    }
+
+    .button-55 {
+        width: 80%;
+        height: 40px;
+        border-radius: 15px;
+        margin: 0%;
+        margin-bottom: 2%;
+    }
+
+    .CajasDeTexto,
+    textarea {
+        width: 80%;
+        font-size: 25px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+
+    .Box2 {
+        width: 100%;
+        height: 18%;
+        /* background-color: red;         */
+    }
+
+    .BoxMidPrin {
+        width: 90%;
+        height: 60%;
+        /* background-color: red; */
+    }
+
+    img {
+        width: 120px;
+        /* background-color: yellow; */
+    }
+
+    .IMGMARIO {
+        margin-left: -120%;
+        margin-bottom: -115%;
+        width: 70px;
+        height: 100px;
+    }
+
+    .Animacion {
+        animation: MarioCamina 25s ease infinite;
+    }
+
+    @keyframes MarioCamina {
+        0% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(380px);
+        }
+    }
 }
