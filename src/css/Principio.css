@@ -179,7 +179,7 @@ textarea {
     position: relative;
     /* background-color: red; */
     width: 100%;
-    height: 250px;
+    height: 100px;
 }
 
 .Animacion {
@@ -200,10 +200,13 @@ textarea {
 @media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
     .ContenedorPrincipal2 {
         flex-direction: column;
-        height: 1200px;
+        height: 1000px;
         /* background-color: red; */
     }
-
+    .TextoPrin {
+        margin: 2%;
+        text-decoration: none;
+    }
     .button-55 {
         width: 80%;
         height: 40px;
@@ -212,6 +215,10 @@ textarea {
         margin-bottom: 2%;
     }
 
+    .container-input {
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
     .CajasDeTexto,
     textarea {
         width: 80%;
@@ -224,24 +231,25 @@ textarea {
 
     .Box2 {
         width: 100%;
-        height: 18%;
+        height: 25%;        
         /* background-color: red;         */
     }
 
     .BoxMidPrin {
         width: 90%;
-        height: 60%;
+        height: 50%;
         /* background-color: red; */
     }
 
     img {
-        width: 120px;
+        width: auto;
+        height: 150px;
         /* background-color: yellow; */
     }
 
     .IMGMARIO {
         margin-left: -120%;
-        margin-bottom: -115%;
+        margin-bottom: -87%;
         width: 70px;
         height: 100px;
     }

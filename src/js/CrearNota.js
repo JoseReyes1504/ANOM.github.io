@@ -86,7 +86,7 @@ Img2.addEventListener("change", () => {
 
 
 function redireccionar(){
-    location.href="./index.html";
+    location.href="../../index.html";
 }
 
 
