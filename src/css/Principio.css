@@ -2,6 +2,55 @@
     display: none;
 }
 
+:root {
+    --translate: -120px;    
+}
+
+.MSJ {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1%;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#9f8465;
+    border-radius: 15px;
+    transition: all 800ms;
+    transform: translateY(var(--translate));
+    z-index: 3;
+}
+
+.Barra {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.Progreso{    
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    background-image: linear-gradient(to right top, #3bafde, #00c5dd, #00d7c7, #5de6a3, #adee7a);
+}
+
+.ProgressAnimacion {
+    animation: BarraProgress 5s;
+}
+
+@keyframes BarraProgress {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
 .ContenedorPrincipal2 {
     width: 90%;
     height: 700px;
@@ -14,7 +63,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.Box2{
+.Box2 {
     width: 20%;
     height: 50%;
     margin: 0% 2%;
@@ -197,16 +246,27 @@ textarea {
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
     .ContenedorPrincipal2 {
         flex-direction: column;
         height: 1000px;
         /* background-color: red; */
     }
+    .MSJ {
+        width: 300px;        
+        margin-right: 8%;            
+    }
+    
+    .Barra{    
+        margin-top: 12%;
+        width: 80%;
+        /* background-color: blue; */
+    }
     .TextoPrin {
         margin: 2%;
         text-decoration: none;
     }
+
     .button-55 {
         width: 80%;
         height: 40px;
@@ -219,6 +279,7 @@ textarea {
         margin-top: 5%;
         margin-bottom: 0%;
     }
+
     .CajasDeTexto,
     textarea {
         width: 80%;
@@ -231,7 +292,7 @@ textarea {
 
     .Box2 {
         width: 100%;
-        height: 25%;        
+        height: 25%;
         /* background-color: red;         */
     }
 
@@ -263,8 +324,106 @@ textarea {
             transform: translateX(0px);
         }
 
-        100% {
-            transform: translateX(380px);
+        98% {
+            transform: translateX(420px);
         }
+
+        100% {
+            transform: translateX(420px);
+        }
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1180px) {
+    .ContenedorPrincipal2 {
+        flex-direction: column;
+        height: 1000px;
+        /* background-color: red; */
+    }
+    .MSJ {
+        width: 300px;        
+        margin-right: 8%;            
+    }
+    
+    .Barra{    
+        margin-top: 12%;
+        width: 80%;
+        /* background-color: blue; */
+    }
+    .TextoPrin {
+        margin: 2%;
+        text-decoration: none;
+    }
+
+    .button-55 {
+        width: 80%;
+        height: 40px;
+        border-radius: 15px;
+        margin: 0%;
+        margin: 2% auto;
+    }
+
+    .container-input {
+        margin-top: 5%;
+        margin-bottom: 0%;
+    }
+
+    .CajasDeTexto,
+    textarea {
+        width: 80%;
+        font-size: 25px;
+    }
+
+    textarea {
+        font-size: 18px;
+    }
+
+    .Box2 {
+        width: 100%;
+        height: 25%;
+        /* background-color: red;         */
+    }
+
+    .BoxMidPrin {
+        width: 90%;
+        height: 50%;
+        /* background-color: red; */
+    }
+
+    img {
+        width: auto;
+        height: 150px;
+        /* background-color: yellow; */
+    }
+
+    .IMGMARIO {
+        margin-left: -120%;
+        margin-bottom: -7%;
+        width: 70px;
+        height: 100px;
+    }
+
+    .Animacion {
+        animation: MarioCamina 25s ease infinite;
+    }
+
+    @keyframes MarioCamina {
+        0% {
+            transform: translateX(0px);
+        }
+
+        98% {
+            transform: translateX(820px);
+        }
+
+        100% {
+            transform: translateX(820px);
+        }
+    }
+    .footer2 {
+        position: relative;
+        /* background-color: red; */
+        width: 100%;
+        height: 200px;
     }
 }

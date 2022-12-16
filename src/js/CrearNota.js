@@ -7,6 +7,9 @@ const Img1 = document.getElementById("image");
 const Img2 = document.getElementById("image2");
 const ImgCA1 = document.getElementById("ImagenCargada");
 const ImgCA2 = document.getElementById("ImagenCargada2");
+const Progreso = document.getElementById("Progreso");
+
+const style = document.documentElement.style;
 
 function GenerarCodigo() {
     var d = new Date().getTime();
@@ -16,6 +19,12 @@ function GenerarCodigo() {
         return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
     return uuid;
+}
+
+function MostrarMSJ(MSJ){
+    style.setProperty('--translate', '0px');    
+    Progreso.classList.add("ProgressAnimacion");
+    document.getElementById("MSJR").innerHTML= MSJ;
 }
 
 btnEnviar.addEventListener('click', async function () {
@@ -30,16 +39,14 @@ btnEnviar.addEventListener('click', async function () {
             var Referencia = CrearRefencia(name);
             var Referencia2 = CrearRefencia(name2);
 
-            AgregarNota(Titulo.value, Contenido.value, name, name2);        
-            limpiar();        
-            console.log('Se creo la nota');
-
+            AgregarNota(Titulo.value, Contenido.value, name, name2);                    
+            MostrarMSJ("Creando Nota");
             uploadBytes(Referencia, File).then((snapshot) => {
-                console.log('Se subio el archivo');
-                
+                MostrarMSJ("Subiendo Primera Imagen");
                 uploadBytes(Referencia2, File2).then((snapshot) => {
-                    console.log('Se subio el archivo 2');
-                    setTimeout(redireccionar, 1000);    
+                    MostrarMSJ("Subiendo Segunda Imagen");
+                    setTimeout(redireccionar, 2000);    
+                    limpiar();            
                 });
             });
             
