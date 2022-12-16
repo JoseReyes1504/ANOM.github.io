@@ -325,11 +325,11 @@ textarea {
         }
 
         98% {
-            transform: translateX(480px);
+            transform: translateX(520px);
         }
 
         100% {
-            transform: translateX(480px);
+            transform: translateX(520px);
         }
     }
 }
