@@ -89,7 +89,8 @@ body{
 }
 
 
-.Boton{
+.Boton,
+.Boton1{
     width: 35%;
     height: 20%;
     border: none;
@@ -107,29 +108,9 @@ body{
     position: absolute;
     z-index: -1;
 }
-
-.Boton2,
-.Boton3 {
-    height: 20%;
-}
-
-.Boton3 {
-    background-color: transparent;
-    color: var(--Color);
-    border: 1px solid black;
-    border-color: var(--Border-color);
-}
-
 .Boton:hover,
-.Boton1:hover,
-.Boton2:hover {
+.Boton1:hover{
     background-color: #9ebcae;
-}
-
-.Boton3:hover {
-    background-color: red;
-    color: white;
-    border: none;
 }
 
 .Eslogan{
@@ -138,4 +119,38 @@ body{
 
 label{
     font-size: 35px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 500px) {
+    body{
+        min-height: 145vh;
+    }
+    .ContenedorLogin {
+        flex-direction: column;
+        width: 90%;
+        /* background-color: red; */
+        margin-left: 8%;
+    }
+
+    .ContenedorImagen {
+        width: 100%;
+        height: 100%;        
+        border-radius: 0%;
+    }
+
+    .Boton{                
+        height: 50px;
+        margin-top: -10%;        
+    }
+    .Box {
+        position: absolute;
+        border-radius: 0%;  
+        margin: 5% auto;
+        height: 700px;
+        /* background-color: red;       */
+    }
+    .Eslogan{
+        font-size: 28px;
+        text-align: center;
+    }
 }
