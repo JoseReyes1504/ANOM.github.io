@@ -1,6 +1,6 @@
 import { getStorage, listAll, ref, uploadBytes, getDownloadURL, deleteObject  } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js";
 import { getFirestore, doc, collection, addDoc, deleteDoc, getDocs, onSnapshot, getDoc, updateDoc, query, where } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js"
-import { getAuth } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
 
 
@@ -35,6 +35,12 @@ export const CrearRefencia = (Imagen) => ref(storage, Imagen);
 
 export const ObtenerImagen = (Referencia) => getDownloadURL(ref(storage, Referencia));
 
+export const IniciarSesion = (Correo, Password) => signInWithEmailAndPassword(auth, Correo, Password);
+
+export const CerrarSesion = () => signOut(auth); 
+
+export const SesionCurso = () => onAuthStateChanged(auth); 
+
 export {
     db,
     collection,
@@ -43,7 +49,9 @@ export {
     where, getDocs,
     uploadBytes,
     getDownloadURL,
-    ref
+    ref,
+    getAuth,
+    onAuthStateChanged 
 }
 
 

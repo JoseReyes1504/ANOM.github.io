@@ -1,8 +1,6 @@
 const style = document.documentElement.style;
 const Barra = document.querySelector(".Barra");
 
-console.log(Barra);
-
 export function MostrarMSJ(MSJ) {
     Progreso.classList.remove("ProgressAnimacion");
     Barra.setAttribute("style", "opacity: 1");

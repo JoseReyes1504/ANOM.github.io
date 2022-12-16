@@ -1,7 +1,19 @@
-import { ObtenerDato, CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, EliminarImagen } from "./db.js";
+import { CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, EliminarImagen, CerrarSesion} from "./db.js";
 import { MostrarMSJSinBarra } from "./MSJ.js";
 
 const ContenedorPrincipal = document.getElementById('ContenedorPrincipal');
+const btnSalir = document.getElementById("btnSalir");
+
+
+
+btnSalir.addEventListener("click", async() =>{
+    try{
+        await CerrarSesion();
+        location.href='../../index.html';
+    }catch(err){
+        console.log(err);
+    }
+});
 
 window.addEventListener('DOMContentLoaded', async () => {
     const q = query(collection(db, "Nota"));
