@@ -38,8 +38,7 @@
 .TextoPrin {
     font-size: 40px;
     color: white;
-    font-family: 'Amatic SC', cursive;
-    text-decoration: overline;
+    font-family: 'Amatic SC', cursive;    
 }
 
 .CajasDeTexto,
@@ -217,7 +216,7 @@ textarea {
         margin: 2%;
         text-decoration: none;
     }
-
+        
     .button-55 {
         width: 80%;
         height: 40px;
@@ -283,6 +282,7 @@ textarea {
             transform: translateX(520px);
         }
     }
+    
 }
 
 @media only screen and (min-device-width : 500px) and (max-device-width : 1180px) {

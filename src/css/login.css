@@ -25,7 +25,7 @@ body{
     justify-content: center;
     background-color: white;
     transition: all 800ms;
-    background-image: url('../iconos/Parejas.png');
+    background-image: url('../iconos/lluviadeestellas.gif');
     background-size: cover;
     background-position: center;
 }
@@ -94,7 +94,7 @@ body{
     width: 35%;
     height: 20%;
     border: none;
-    background-color: #181818;
+    background-color: #9ebcae;
     border-radius: 10px;
     font-size: 30px;
     color: white;
@@ -110,7 +110,7 @@ body{
 }
 .Boton:hover,
 .Boton1:hover{
-    background-color: #9ebcae;
+    background-color: pink;
 }
 
 .Eslogan{
