@@ -1,0 +1,141 @@
+
+*{
+    font-family: 'Amatic SC', cursive;
+}
+
+body{
+    background-color: pink;    
+}
+
+.ContenedorLogin {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    margin: 2% auto;
+    background-color: transparent;
+}
+
+.ContenedorImagen {
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    transition: all 800ms;
+    background-image: url('../iconos/Parejas.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.ContenedorImagen img {
+    width: auto;
+    height: auto;
+}
+
+.ContenedorFormulario {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+.Box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #181818;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+    transition: all 800ms;
+    z-index: 1;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.Box h1 {
+    font-size: 80px;
+    margin: 0%;
+    margin-top: 5%;
+}
+
+
+.TextBox {
+    width: 80%;
+    height: 40px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    color: #181818;
+    border-bottom: 2px solid #181818;
+    font-size: 28px;
+    outline: none;
+}
+
+.Formulario {
+    width: 100%;
+    height: 40%;
+    margin-top: 5%;
+    padding: 1%;
+    margin-left: 20%;
+    /* background-color: #181818; */
+}
+
+
+.Boton{
+    width: 35%;
+    height: 20%;
+    border: none;
+    background-color: #181818;
+    border-radius: 10px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5% 2%;
+    transition: all 400ms;
+}
+
+.Boton1 {
+    position: absolute;
+    z-index: -1;
+}
+
+.Boton2,
+.Boton3 {
+    height: 20%;
+}
+
+.Boton3 {
+    background-color: transparent;
+    color: var(--Color);
+    border: 1px solid black;
+    border-color: var(--Border-color);
+}
+
+.Boton:hover,
+.Boton1:hover,
+.Boton2:hover {
+    background-color: #9ebcae;
+}
+
+.Boton3:hover {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.Eslogan{
+    font-size: 25px;
+}
+
+label{
+    font-size: 35px;
+}
