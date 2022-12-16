@@ -325,11 +325,11 @@ textarea {
         }
 
         98% {
-            transform: translateX(420px);
+            transform: translateX(450px);
         }
 
         100% {
-            transform: translateX(420px);
+            transform: translateX(450px);
         }
     }
 }
@@ -413,11 +413,11 @@ textarea {
         }
 
         98% {
-            transform: translateX(820px);
+            transform: translateX(920px);
         }
 
         100% {
-            transform: translateX(820px);
+            transform: translateX(920px);
         }
     }
     .footer2 {
