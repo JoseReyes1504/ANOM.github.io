@@ -268,7 +268,7 @@ img {
     }
 
     .ContenedorPrincipal {
-        height: 600px;
+        height: 800px;
         margin-top: 10%;
     }
 
@@ -284,10 +284,10 @@ img {
     }
 
     img {
-        /* background-color: red; */
-        width: 120px;
+        width: 100%;
+        height: 100%;
     }
-
+    
     .Titulo {
         font-size: 25px;        
     }
