@@ -1,15 +1,9 @@
-import { ObtenerDato, CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, getDownloadURL, EliminarImagen } from "./db.js";
+import { ObtenerDato, CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, EliminarImagen } from "./db.js";
+import { MostrarMSJSinBarra } from "./MSJ.js";
 
 const ContenedorPrincipal = document.getElementById('ContenedorPrincipal');
-const style = document.documentElement.style;
 
-//ObtenerDatos
 window.addEventListener('DOMContentLoaded', async () => {
-    CargarCards();
-});
-
-
-async function CargarCards() {
     const q = query(collection(db, "Nota"));
     const querySnapshot = await getDocs(q);
 
@@ -18,7 +12,7 @@ async function CargarCards() {
         const Cards = doc.data();
 
         lista += `
-        <div class="ContenedorPrincipal" >
+        <div class="ContenedorPrincipal mostrarArriba">
         <div class="ContenedorTitulo">        
         <span class="SpanTitulo" title="Eliminar"><svg class="heart2" xmlns="http://www.w3.org/2000/svg" height="40" width="40" data-id="${doc.id}" data-Img="${Cards.NombreImagen}" data-Img2="${Cards.NombreImagen2}"><path d="M18.333 19.25Zm0 15.708-4.5-4.083q-3.625-3.292-5.958-5.667t-3.729-4.25q-1.396-1.875-1.938-3.5-.541-1.625-.541-3.458 0-3.833 2.562-6.417Q6.792 5 10.542 5q2.333 0 4.333 1.042 2 1.041 3.458 3 1.625-2 3.584-3.021Q23.875 5 26.125 5q3.583 0 6.229 2.542Q35 10.083 35 14q0 1-.188 1.938-.187.937-.437 1.562h-2.958q.291-.708.541-1.708.25-1 .25-1.834 0-2.791-1.916-4.479-1.917-1.687-4.167-1.687-2.125 0-3.875 1.229t-2.917 3.437h-2q-1.166-2.166-2.937-3.416t-3.854-1.25q-2.584 0-4.334 1.771-1.75 1.77-1.75 4.437 0 1.458.542 2.875t2.042 3.313q1.5 1.895 4.229 4.541 2.729 2.646 7.062 6.563 1.25-1.125 2.521-2.25T23.208 27l.313.292q.312.291.667.646l.666.666.313.313q-1.042.958-2.334 2.062-1.291 1.104-2.541 2.229ZM25 23.042v-2.75h13.333v2.75Z"/></svg></span>        
         <p class="Titulo">${Cards.Titulo}</p>        
@@ -44,6 +38,7 @@ async function CargarCards() {
     </div>
             `
     });
+
 
     //Cargar Imagenes 
     ContenedorPrincipal.innerHTML = lista;
@@ -75,14 +70,12 @@ async function CargarCards() {
     const btnEliminar = ContenedorPrincipal.querySelectorAll(".heart2");
 
     btnEliminar.forEach(btn => {
-        btn.addEventListener("click", (event) =>{                                      
-            EliminarImagen(CrearRefencia(event.target.dataset.img));
-            EliminarImagen(CrearRefencia(event.target.dataset.img2));
-            BorrarCard(event.target.dataset.id);      
-            console.log("Se eliminaron los datos");
-            setTimeout(() => {
-                location.href = './index.html';
-            }, 2000); 
+        btn.addEventListener("click", async (event) => {
+            MostrarMSJSinBarra("Eliminando Nota", 1000);
+            await EliminarImagen(CrearRefencia(event.target.dataset.img));
+            await EliminarImagen(CrearRefencia(event.target.dataset.img2));            
+            await BorrarCard(event.target.dataset.id);
+            location.href = './inicio.html';
         })
     });
 
@@ -91,13 +84,10 @@ async function CargarCards() {
 
     btnMeGusta.forEach(btn => {
         btn.addEventListener("click", function () {
-            
+            MostrarMSJSinBarra("Te Gusto", 3000);
             btn.setAttribute('style', "fill: red");
             btn.classList.add('Animar');
 
-            // btn.removeAttribute('style');
-            // btn.classList.remove('Animar');
-
         });
     });
-}
+});

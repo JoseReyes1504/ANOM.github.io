@@ -1,5 +1,7 @@
 import { uploadBytes, CrearRefencia, ObtenerDato, BorrarCard, db, onSnapshot, collection, query, where, getDocs, AgregarNota } from "./db.js";
 
+import { MostrarMSJ, EsconderMSJ, MostrarMSJSinBarra } from "./MSJ.js";
+
 const Titulo = document.getElementById("txtTitulo");
 const Contenido = document.getElementById("txtContenido");
 const btnEnviar = document.getElementById("btnEnviar");
@@ -7,9 +9,7 @@ const Img1 = document.getElementById("image");
 const Img2 = document.getElementById("image2");
 const ImgCA1 = document.getElementById("ImagenCargada");
 const ImgCA2 = document.getElementById("ImagenCargada2");
-const Progreso = document.getElementById("Progreso");
 
-const style = document.documentElement.style;
 
 function GenerarCodigo() {
     var d = new Date().getTime();
@@ -21,39 +21,38 @@ function GenerarCodigo() {
     return uuid;
 }
 
-function MostrarMSJ(MSJ){
-    style.setProperty('--translate', '0px');    
-    Progreso.classList.add("ProgressAnimacion");
-    document.getElementById("MSJR").innerHTML= MSJ;
-}
+
 
 btnEnviar.addEventListener('click', async function () {
     try {
         var File = Img1.files[0];
         var File2 = Img2.files[0];
 
-        if (File != null && File2 != null) {            
+        if (File != null && File2 != null && Titulo != "" && Contenido != "") {
             var name = GenerarCodigo() + "-" + File.name;
             var name2 = GenerarCodigo() + "-" + File2.name;
 
             var Referencia = CrearRefencia(name);
             var Referencia2 = CrearRefencia(name2);
 
-            AgregarNota(Titulo.value, Contenido.value, name, name2);                    
+            AgregarNota(Titulo.value, Contenido.value, name, name2);
             MostrarMSJ("Creando Nota");
-            uploadBytes(Referencia, File).then((snapshot) => {
-                MostrarMSJ("Subiendo Primera Imagen");
-                uploadBytes(Referencia2, File2).then((snapshot) => {
-                    MostrarMSJ("Subiendo Segunda Imagen");
-                    setTimeout(redireccionar, 2000);    
-                    limpiar();            
-                });
-            });
+
+            await uploadBytes(Referencia, File)
+            MostrarMSJ("Subiendo Primera Imagen");
+
+            await uploadBytes(Referencia2, File2)
+            MostrarMSJ("Subiendo Segunda Imagen");
             
-        }else{
+            redireccionar();
+            MostrarMSJ("Subiendo Segunda Imagen");
+            
+            // limpiar();
+        } else {            
+            MostrarMSJSinBarra("Datos Vacios", 4000);
             name = '';
             name2 = '';
-        }        
+        }
     } catch (error) {
         console.log("Hubo un error al tratar de subir la nota " + error);
     }
@@ -92,8 +91,8 @@ Img2.addEventListener("change", () => {
 
 
 
-function redireccionar(){
-    location.href="../../index.html";
+function redireccionar() {
+    location.href = "./Inicio.html";
 }
 
 

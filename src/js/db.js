@@ -1,5 +1,6 @@
 import { getStorage, listAll, ref, uploadBytes, getDownloadURL, deleteObject  } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js";
 import { getFirestore, doc, collection, addDoc, deleteDoc, getDocs, onSnapshot, getDoc, updateDoc, query, where } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js"
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
 
 
@@ -16,6 +17,8 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore();
 const storage = getStorage();
 
+export const auth = getAuth(app);
+
 export const ObtenerDatos = () => getDocs(collection(db, 'Nota'));
 
 export const ObtenerDato = (id) => getDoc(doc(db, 'Nota', id));
@@ -31,19 +34,6 @@ export const EliminarImagen = (Referencia) => deleteObject(Referencia);
 export const CrearRefencia = (Imagen) => ref(storage, Imagen);
 
 export const ObtenerImagen = (Referencia) => getDownloadURL(ref(storage, Referencia));
-// then((url) => {
-//     const xhr = new XMLHttpRequest();
-//     xhr.responseType = 'blob';
-//     xhr.onload = (event) => {
-//         const blob = xhr.response;
-//     };
-//     xhr.open('GET', url);
-//     xhr.send();    
-// })
-// .catch((error) => {
-//     // Handle any errors
-// });
-
 
 export {
     db,
