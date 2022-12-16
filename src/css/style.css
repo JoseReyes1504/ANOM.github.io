@@ -30,7 +30,11 @@ body {
     border-radius: 15px;
     /* margin: -1%; */
     height: 70px;
-    background-image: linear-gradient(to bottom, #bb7bac, #bb6fb5, #b863c1, #af5ad0, #a052e0);
+    background-color:ghostwhite; 
+}
+
+.Header h1{
+    color:#BB78AE;
 }
 
 .Logo {
@@ -181,7 +185,7 @@ body {
 
 .Texto {
     font-family: 'Amatic SC', cursive;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     letter-spacing: 2px;
     margin: 0%;
