@@ -1,4 +1,4 @@
-import { CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, EliminarImagen, CerrarSesion} from "./db.js";
+import {  onAuthStateChanged, auth ,CrearRefencia, BorrarCard, db, ref, onSnapshot, collection, query, where, getDocs, ObtenerImagen, EliminarImagen, CerrarSesion } from "./db.js";
 import { MostrarMSJSinBarra } from "./MSJ.js";
 
 const ContenedorPrincipal = document.getElementById('ContenedorPrincipal');
@@ -6,11 +6,11 @@ const btnSalir = document.getElementById("btnSalir");
 
 
 
-btnSalir.addEventListener("click", async() =>{
-    try{
+btnSalir.addEventListener("click", async () => {
+    try {
         await CerrarSesion();
-        location.href='../../index.html';
-    }catch(err){
+        location.href = '../../index.html';
+    } catch (err) {
         console.log(err);
     }
 });
@@ -55,6 +55,24 @@ window.addEventListener('DOMContentLoaded', async () => {
     //Cargar Imagenes 
     ContenedorPrincipal.innerHTML = lista;
 
+    const Corazones = ContenedorPrincipal.querySelectorAll(".heart2");
+    const Corazones2 = ContenedorPrincipal.querySelectorAll(".heart1");    
+
+    onAuthStateChanged(auth, (user) => {        
+        if (user.email === "jose.reyessuazo@gmail.com") {
+            
+        } else {            
+            Corazones.forEach(Cor =>{
+                Cor.setAttribute("style", "opacity: 0");
+            })
+            Corazones2.forEach(Cor =>{
+                Cor.setAttribute("style", "opacity: 0");
+            })
+        }
+        // console.log(Usuario);
+    });
+
+
     const imgs = ContenedorPrincipal.querySelectorAll("#ImagenUpdate2");
     const imgs2 = ContenedorPrincipal.querySelectorAll("#ImagenUpdate");
 
@@ -85,7 +103,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         btn.addEventListener("click", async (event) => {
             MostrarMSJSinBarra("Eliminando Nota", 1000);
             await EliminarImagen(CrearRefencia(event.target.dataset.img));
-            await EliminarImagen(CrearRefencia(event.target.dataset.img2));            
+            await EliminarImagen(CrearRefencia(event.target.dataset.img2));
             await BorrarCard(event.target.dataset.id);
             location.href = '../html/Inicio.html';
         })

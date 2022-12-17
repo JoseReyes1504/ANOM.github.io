@@ -1,5 +1,6 @@
 import { onAuthStateChanged, auth } from "./db.js";
 
+const BotonCrear = document.getElementById("btnEnviar2");
 
 export var Usuario = "";
 
@@ -9,9 +10,10 @@ onAuthStateChanged(auth, (user) => {
     }
 
     if (user.email === "jose.reyessuazo@gmail.com") {
-        Usuario = "Tato";        
-    } else {
-        Usuario = "Alejandra";
+            
+    } else {            
+        BotonCrear.setAttribute("style", "visibility: hidden");
     }
-    console.log(Usuario);
+
+    
 });
