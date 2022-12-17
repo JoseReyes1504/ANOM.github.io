@@ -201,11 +201,7 @@ textarea {
         flex-direction: column;
         height: 1000px;
         /* background-color: red; */
-    }
-    .MSJ {
-        width: 300px;        
-        margin-right: 8%;            
-    }
+    }    
     
     .Barra{    
         margin-top: 12%;
@@ -290,10 +286,6 @@ textarea {
         flex-direction: column;
         height: 1000px;
         /* background-color: red; */
-    }
-    .MSJ {
-        width: 300px;        
-        margin-right: 8%;            
     }
     
     .Barra{    

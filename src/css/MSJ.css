@@ -1,5 +1,5 @@
 :root {
-    --translate: -120px;    
+    --translate: -120px;
 }
 
 .MSJ {
@@ -20,7 +20,10 @@
     z-index: 3;
 }
 
-#MSJR{
+#MSJR {
+    text-decoration: none;
+    height: 10px;
+    margin-top: -25px;
     font-weight: bold;
     color: #181818;
 }
@@ -32,7 +35,7 @@
     background-color: white;
 }
 
-.Progreso{    
+.Progreso {
     width: 0px;
     height: 10px;
     border-radius: 15px;
@@ -55,7 +58,29 @@
     0% {
         width: 0px;
     }
+
     100% {
         width: 300px;
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 500px) {
+    .MSJ {
+        width: 300px;
+        height: 60px;
+        margin-right: 8%;
+        ;
+    }
+
+    #MSJR {
+        font-size: 30px;                
+    }
+
+    .Barra {
+        position: absolute;
+        bottom: 0%;
+        width: 80%;
+        margin: 2%;        
     }
 }
