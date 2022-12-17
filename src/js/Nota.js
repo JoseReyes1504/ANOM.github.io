@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     BotonCrear.forEach(btn => {
         btn.onclick = function () {
-            location.href = "./Principio.html";
+            location.href = "../html/Principio.html";
         }
     });
 
@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             await EliminarImagen(CrearRefencia(event.target.dataset.img));
             await EliminarImagen(CrearRefencia(event.target.dataset.img2));            
             await BorrarCard(event.target.dataset.id);
-            location.href = './inicio.html';
+            location.href = '../html/Inicio.html';
         })
     });
 

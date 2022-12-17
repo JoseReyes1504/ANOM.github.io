@@ -152,12 +152,13 @@ body {
 
 .heart1 {
     position: absolute;
-    left: 7%;
+    right: 7%;
+    
 }
 
 .heart2 {
     position: absolute;
-    right: 7%;
+    left: 7%;
 }
 
 .SpanTitulo {
