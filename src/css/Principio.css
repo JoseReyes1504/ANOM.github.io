@@ -137,7 +137,8 @@ textarea {
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     box-sizing: border-box;
     color: #c39f77;
-    width: 40%;
+    width: 40%;   
+    border-radius: 15px; 
     margin: 1% 0%;
     cursor: pointer;
     display: inline-block;
@@ -209,7 +210,8 @@ textarea {
         /* background-color: blue; */
     }
     .TextoPrin {
-        margin: 2%;
+        margin: 5% 0%;
+        /* background-color: red; */
         text-decoration: none;
     }
         
@@ -217,8 +219,7 @@ textarea {
         width: 80%;
         height: 40px;
         border-radius: 15px;
-        margin: 0%;
-        margin-bottom: 2%;
+        margin: auto 0%;            
     }
 
     .container-input {
@@ -244,7 +245,7 @@ textarea {
 
     .BoxMidPrin {
         width: 90%;
-        height: 50%;
+        height: 60%;
         /* background-color: red; */
     }
 

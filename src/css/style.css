@@ -12,6 +12,7 @@
 body {
     background-color: pink;
     flex-direction: column;
+    overflow-x: hidden;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,8 +213,8 @@ body {
 
 
 img {
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 80%;
     margin: auto;
     border-radius: 15px;    
     /* background-color: red; */
