@@ -52,6 +52,10 @@ body {
     margin-right: 1%;
 }
 
+#btnEnviar2{
+    opacity: 0%;
+}
+
 .Header h1{
     color:white;
 }
