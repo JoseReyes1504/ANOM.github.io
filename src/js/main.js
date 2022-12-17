@@ -12,7 +12,7 @@ onAuthStateChanged(auth, (user) => {
     if (user.email === "jose.reyessuazo@gmail.com") {
             
     } else {            
-        BotonCrear.setAttribute("style", "visibility: hidden");
+        BotonCrear.setAttribute("style", "opacity:0");
     }
 
     
