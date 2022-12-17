@@ -1,0 +1,34 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.ContenedorB1{
+    width: 100%;
+    height: 720px;
+    margin: 1% auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    justify-content: center;    
+}
+
+.BoxesB1,
+.BoxesB2{
+    width: 20%;
+    height: 45%;
+    margin: 1% 1%;
+    background-color: burlywood;
+}
+
+
+.BoxesB2{
+    width: 62%;
+    background-color: red;
+}
