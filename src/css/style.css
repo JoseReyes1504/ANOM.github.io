@@ -38,7 +38,7 @@ body {
 }
 
 
-#btnEnviar2, #btnSalir{
+#btnEnviar1,#btnEnviar2, #btnSalir{
     position: absolute;
     right: 0%;
     width: 10%;
