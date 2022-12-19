@@ -8,7 +8,7 @@
     display: none;
 }
 
-body {
+body {     
     background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 .img {
-    /* background-image: url("../iconos/Donitas.jpg"); */
+    background-image: url("../iconos/Donitas.jpg");
 }
 
 .imgCompart,
@@ -158,12 +158,38 @@ body {
 .BoxO p{
     height: 100%;
     padding: 5%;
-    transition: all 800ms;
+    transition: all 400ms;
 }
 .BoxO p:hover{
     background-color: #3496db;
     color: white;
 }
+
+
+
+.AnimarOpa{
+    animation: Aparecer 2s ease;
+}
+
+.AnimarOpa2{
+    animation: Aparecer 2s ease;
+    /* animation-delay: 1s; */
+}
+
+
+@keyframes Aparecer{
+    0% {
+        transform: translateY(400px);
+        opacity: 0%;
+        
+    }    
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
