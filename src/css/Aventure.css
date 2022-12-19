@@ -8,8 +8,8 @@
     display: none;
 }
 
-body{
-    background-color: pink;
+body {
+    background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );
 }
 
 .ContenedorB1 {
@@ -25,7 +25,7 @@ body{
 .BoxesB1,
 .BoxesB2,
 .BoxesB3,
-.BoxesB23{
+.BoxesB23 {
     width: 15%;
     height: 500px;
     margin: 1% 1%;
@@ -37,12 +37,13 @@ body{
 }
 
 
-.BoxesB2, .BoxesB23{
-    width: 52%;    
+.BoxesB2,
+.BoxesB23 {
+    width: 52%;
     /* background-color: red; */
 }
 
-.BoxesB23{
+.BoxesB23 {
     flex-wrap: wrap;
 }
 
@@ -50,7 +51,7 @@ body{
     width: 15%;
 }
 
-.Info{
+.Info {
     width: 100%;
     height: 30%;
     padding: 2%;
@@ -60,9 +61,9 @@ body{
     text-align: center;
     font-weight: bold;
     font-size: 25px;
-    /* background-color: red; */
+    /* background-image: linear-gradient( 178deg,  rgba(201,234,252,0.51) 14.9%, rgba(139,192,216,0.73) 80% ); */
+    background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );      
 }
-
 .Buttons {
     width: 100%;
     height: 10%;
@@ -85,32 +86,34 @@ body{
 .img6 {
     width: 100%;
     height: 60%;
-    background-image: url("../iconos/Donas.jpg");
+    background-image: url("../iconos/lluviadeestellas.gif");
     background-size: cover;
     background-position: center;
 }
 
 .img {
-    background-image: url("../iconos/Donitas.jpg");
+    /* background-image: url("../iconos/Donitas.jpg"); */
 }
 
-.imgCompart,.imgCompart2  {
+.imgCompart,
+.imgCompart2 {
     width: 50%;
-    height: 10  0%;
+    height: 10 0%;
     /* margin: auto; */
     background-image: url("../iconos/Donitas.jpg");
     background-size: cover;
     background-position: center;
 }
-.imgCompart2{
-    background-image: url("../iconos/20221216_192142.jpg");
+
+.imgCompart2 {
+    background-image: url("../iconos/lluviadeestellas.gif");
 }
 
 .img1 {
     background-image: url("../iconos/20221217_090719.jpg");
 }
 
-.img2{
+.img2 {
     background-image: url("../iconos/Donitas.jpg");
 }
 
@@ -123,9 +126,66 @@ body{
 }
 
 .img5 {
-    background-image: url("../iconos/Screenshot_20221217-125645_WhatsApp.jpg");   
+    background-image: url("../iconos/Screenshot_20221217-125645_WhatsApp.jpg");
 }
 
 .img6 {
-    background-image: url("../iconos/IMG-20221204-WA0039.jpg");   
+    background-image: url("../iconos/IMG-20221204-WA0039.jpg");
+}
+
+.ContenedorOpen{
+    width: 86%;
+    margin: auto;
+    height: 150px;
+    /* background-color: red; */
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;    
+    margin-bottom: 5%;  
+}
+
+
+.BoxO{
+    width: 20%;
+    height: 100%;       
+    text-align: center;        
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 25px;          
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.BoxO p{
+    height: 100%;
+    padding: 5%;
+    transition: all 800ms;
+}
+.BoxO p:hover{
+    background-color: #3496db;
+    color: white;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
+
+    .BoxesB1,
+    .BoxesB2,
+    .BoxesB3,
+    .BoxesB23 {
+        width: 80%;
+        height: 600px;
+    }
+
+    .Info {
+        height: 25%;
+    }
+
+    .ContenedorOpen{
+        flex-direction: column;
+    }
+
+    .BoxO{
+        width: 100%;
+        margin-top: 5%;
+    }
 }
