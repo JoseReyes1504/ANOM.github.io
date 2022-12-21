@@ -224,6 +224,7 @@ img {
     /* background-color: red; */
 }
 
+
 .footer {
     position: relative;
     /* background-color: red; */
@@ -251,21 +252,26 @@ img {
 #Resolucion = B/w 230px to 480px */
 @media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
 
-    #btnEnviar2, #btnSalir{
+    #btnEnviar2, #btnEnviar1, #btnSalir{
         position: absolute;
         right: 0%;
-        width: 20%;
+        width: 20%;        
         margin-top: -5.5%; 
         margin-right: 23%;
         background-color: pink;  
         color: white;     
     }
+
+    #btnEnviar2{
+        margin-right: 44%;        
+    }
+
     #btnSalir{
         margin-right: 2%;
     }
 
     .Logo {        
-        width: 50%;
+        width: 35%;
         /* background-color: red; */
     }
 

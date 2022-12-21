@@ -10,7 +10,7 @@ btnEntrar.addEventListener("click", async () => {
     try {
         const credenciales = await IniciarSesion(email.value, password.value);    
         // console.log(credenciales);
-        location.href = './src/html/Inicio.html';
+        location.href = './src/html/Recorrido.html';
     } catch (err) {
 
         if (err.code === "auth/invalid-email") {
