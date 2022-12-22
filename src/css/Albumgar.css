@@ -1,0 +1,448 @@
+* {
+    font-family: 'Amatic SC', cursive;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+:root {
+    --TranslateCarrusel: 00%;
+    --ModoNoche: white;
+    --ModoNocheFont: #181818;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-Y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#btnModo {
+    width: 100px;
+    height: 40px;
+    background-color: var(--ModoNocheFont);
+    color: var(--ModoNoche);
+    cursor: pointer;
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    margin: 2%;
+    z-index: 2;
+    transition: all 800ms;
+}
+
+#btnModo:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.Pagina,
+.Pagina1,
+.Pagina2,
+.Pagina3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ModoNoche);
+    display: flex;
+    flex-direction: row;
+    transition: all 800ms;
+    transform: translateY(var(--TranslateCarrusel));
+}
+
+.Pagina1 {
+    transform: translateY(calc(var(--TranslateCarrusel) + 100%));
+}
+
+.Pagina2 {
+    transform: translateY(calc(var(--TranslateCarrusel) + 200%));
+}
+
+.Pagina3 {
+    transform: translateY(calc(var(--TranslateCarrusel) + 300%));
+}
+
+.Fondos {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.Hoja {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Imagenes,
+.ImagenesAb {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ImagenesAb {
+    position: absolute;
+    height: 50%;
+    bottom: -15%;
+    width: 30%;
+}
+
+.imgHoja,
+.imgHoja1,
+.imgHoja2,
+.imgHoja3,
+.imgHoja4,
+.imgHoja5,
+.imgHoja6,
+.imgHoja7,
+.imgHoja8,
+.imgHoja9,
+.imgHoja10,
+.imgHoja11,
+.imgHoja12 {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url(../Garabatos/Planetas.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.imgHoja1 {
+    position: absolute;
+    bottom: -6.5%;
+    width: 350px;
+    background-image: url(../Garabatos/Plantitas.png);
+}
+
+.imgHoja2 {
+    position: absolute;
+    top: 0;
+    width: 350px;
+    background-image: url(../Garabatos/CaenFlores.png);
+}
+
+.imgHoja3 {
+    position: absolute;
+    width: 350px;
+    bottom: 0%;
+    background-image: url(../Garabatos/flores2.png);
+}
+
+.imgHoja4 {
+    width: 100%;
+    height: 150px;
+    background-image: url(../Garabatos/Dunking.png);
+}
+
+.imgHoja5 {
+    height: 150px;
+    margin-top: 35%;
+    background-image: url(../Garabatos/Donuts.png);
+}
+
+.imgHoja6 {
+    width: 100%;
+    height: 280px;
+    background-image: url(../Garabatos/Chocolate.png);
+    margin-bottom: 15%;
+}
+
+.imgHoja7 {
+    width: 65%;
+    height: 175px;
+    background-image: url(../Garabatos/Snacks.png);
+}
+
+.imgHoja8 {
+    height: 50%;
+    background-image: url(../Garabatos/ParkAtracciones.png);
+    z-index: 0;
+}
+
+.imgHoja9 {
+    height: 350px;
+    background-image: url(../Garabatos/Mariposa.png);
+}
+
+.imgHoja11 {
+    height: 30%;
+    background-image: url(../Garabatos/28eN.gif);
+}
+
+
+.imgHoja12 {
+    height: 50%;
+    background-image: url(../Garabatos/Hoja.png);
+}
+
+
+
+.TodaInfo {
+    width: 100%;
+    height: 100%;
+    /* background-color: white; */
+    display: flex;
+    color: var(--ModoNocheFont);
+    justify-content: center;
+    flex-direction: column;
+}
+
+img {
+    width: 50%;
+    height: 100%;
+}
+
+
+.Marco,
+.Marco3,
+.Marco4,
+.Marco5 {
+    width: 95%;
+    height: 600px;
+    background-color: var(--ModoNocheFont);
+}
+
+
+
+.Marco2 {
+    position: absolute;
+    top: 0;
+    margin-top: 5%;
+    width: 900px;
+    /* background-color: red; */
+    height: 500px;
+    background-color: var(--ModoNocheFont);
+}
+
+.Marco3 {
+    width: 200px;
+    height: 300px;
+    transform: rotate(-25deg);
+    z-index: 1;
+}
+
+.Marco4 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    bottom: 5%;
+    right: 40%;
+    transform: rotate(25deg);
+    z-index: 1;
+}
+
+.Marco5 {
+    width: 200px;
+    height: 350px;
+    transform: rotate(25deg);
+    z-index: 1;
+}
+
+.Marco img,
+.Marco2 img,
+.Marco3 img,
+.Marco4 img,
+.Marco5 img {
+    width: 90%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.Continuar {
+    position: relative;
+    /* background-color: red; */
+    width: 5%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+P {
+    font-size: 25px;
+    margin-top: 2%;
+}
+
+svg {
+    fill: var(--ModoNocheFont);
+    transition: all 800ms;
+    cursor: pointer;
+}
+
+svg:hover {
+    fill: #3496db;
+    transform: scale(1.1, 1.1);
+}
+
+
+.AnimarOpa2 {
+    animation: Aparecer 3s ease;
+}
+
+.AnimarOpa {
+    animation: Aparecer2 2s ease;
+}
+
+@keyframes Aparecer {
+    0% {
+        transform: translateX(-800px);
+        opacity: 0%;
+
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes Aparecer2 {
+    0% {
+        transform: translateY(-800px);
+        opacity: 0%;
+
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px) {
+
+    .Pagina,
+    .Pagina1,
+    .Pagina2,
+    .Pagina3 {
+        width: 400px;
+        /* background-color: red; */
+    }
+
+
+    .Hoja {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .TodaInfo {
+        font-size: 12px;
+    }
+
+
+    .Marco,
+    .Marco3,
+    .Marco4,
+    .Marco5 {
+        width: 95%;
+        height: 150px;
+    }
+
+
+    .Marco2 {
+        left: 0%;
+        width: 400px;
+        height: 200px;        
+    }
+    
+    .Marco3 {
+        width: 200px;
+        height: 300px;
+    }
+
+    .Marco4 {
+        width: 300px;
+        height: 400px;
+    }
+
+    .Marco5 {
+        width: 200px;
+        height: 350px;
+        transform: rotate(25deg);
+        z-index: 1;
+    }
+
+
+    .imgHoja {
+        background-image: none;
+    }
+
+    .imgHoja1 {
+        width: 350px;
+    }
+
+    .imgHoja2 {
+        left: 0%;
+        width: 350px;
+    }
+
+    .imgHoja3 {
+        left: 0%;
+        width: 350px;
+    }
+
+    .imgHoja4 {
+        height: 150px;
+    }
+
+    .imgHoja5 {
+        height: 150px;
+    }
+
+    .imgHoja6 {
+        height: 280px;
+    }
+
+    .imgHoja7 {
+        width: 65%;
+        height: 175px;
+
+    }
+
+    .imgHoja8 {
+        height: 50%;
+    }
+
+    .imgHoja9 {
+        height: 350px;
+    }
+
+    .imgHoja11 {
+        height: 30%;
+    }
+
+    .imgHoja12 {
+        height: 50%;
+    }
+
+    #btnModo {
+        top: 0%;
+        left: 0%;
+    }
+}

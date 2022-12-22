@@ -67,9 +67,10 @@ body {
 }
 
 .Fondo3{
-    width: 30%;
-    height: 100%;
-    background-image: url(../iconos/RosaMano.png);
+    width: 25%;    
+    /* background-color: red; */
+    height: 80%;
+    background-image: url(../iconos/ManoConflores.png);
 }
 
 .TodaInfo{
@@ -129,4 +130,9 @@ svg:hover{
         transform: translateX(0px);
         opacity: 100%;
     }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 760px)
+{
+    
 }
