@@ -4,19 +4,13 @@
 
 * {
     /* font-family: 'Amatic SC', cursive;
-    font-family: 'Manrope', sans-serif;
-    font-family: 'Monoton', cursive;
-    font-family: 'Playfair Display', serif; */
+    /* font-family: 'Manrope', sans-serif; */
 }
 
-body {
-    background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );
+body {    
+    background-color: #181818;
     flex-direction: column;
     overflow-x: hidden;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;     */
 }
 
 :root {
@@ -110,7 +104,8 @@ body {
     width: 90%;
     height: 700px;
     margin: 1% auto;
-    background-image: linear-gradient(to bottom, #bb7bac, #bb6fb5, #b863c1, #af5ad0, #a052e0);
+
+    /* background-image: linear-gradient(to bottom, #bb7bac, #bb6fb5, #b863c1, #af5ad0, #a052e0); */
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
