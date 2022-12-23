@@ -1,16 +1,22 @@
-import { IniciarSesion} from "./db.js";
+import { IniciarSesion, ObtenerTuto } from "./db.js";
 import { MostrarMSJSinBarra } from "./MSJ.js"
 
 const email = document.getElementById("txtEmail");
 const password = document.getElementById("txtPswd");
 const btnEntrar = document.getElementById("btnLogin");
 
+var Tutorial = false;
 
 btnEntrar.addEventListener("click", async () => {
     try {
-        const credenciales = await IniciarSesion(email.value, password.value);    
-        // console.log(credenciales);
-        location.href = './src/html/Recorrido.html';
+        const credenciales = await IniciarSesion(email.value, password.value);
+        Tutorial = await ObtenerTuto("vt2lkjKSRSswW9bqLRqc");
+
+        if (Tutorial.data().Tuto == false) {
+            location.href = './src/html/Inicio.html';
+        } else {
+            location.href = './src/html/Recorrido.html';
+        }        
     } catch (err) {
 
         if (err.code === "auth/invalid-email") {

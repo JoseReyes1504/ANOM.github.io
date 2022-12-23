@@ -29,6 +29,10 @@ export function AgregarNota(Titulo, Descripcion, NombreImagen, NombreImagen2) {
     addDoc(collection(db, 'Nota'), { Titulo, Descripcion, NombreImagen, NombreImagen2 });
 }
 
+export const ActualizarTutorial = (id, NuevosCampos) => updateDoc(doc(db, 'Tutorial', id), NuevosCampos);
+
+export const ObtenerTuto = (id) => getDoc(doc(db, 'Tutorial', id));
+
 export const EliminarImagen = (Referencia) => deleteObject(Referencia);
 
 export const CrearRefencia = (Imagen) => ref(storage, Imagen);
@@ -51,7 +55,8 @@ export {
     getDownloadURL,
     ref,
     getAuth,
-    onAuthStateChanged 
+    onAuthStateChanged,
+    getDoc
 }
 
 

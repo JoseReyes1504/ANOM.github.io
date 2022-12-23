@@ -79,7 +79,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     imgs.forEach(img => {
         ObtenerImagen(CrearRefencia(img.alt)).then((url) => {
             img.setAttribute('src', url);
-            console.log(CrearRefencia(img.alt));
         });
     });
 
