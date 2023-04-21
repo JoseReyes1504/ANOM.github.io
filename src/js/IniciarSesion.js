@@ -13,7 +13,7 @@ btnEntrar.addEventListener("click", async () => {
         Tutorial = await ObtenerTuto("vt2lkjKSRSswW9bqLRqc");
 
         if (Tutorial.data().Tuto == false) {
-            location.href = './src/html/Inicio.html';
+            location.href = './src/html/AlbumGar.html';
         } else {
             location.href = './src/html/Recorrido.html';
         }        
